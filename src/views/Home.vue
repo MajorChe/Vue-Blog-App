@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <div v-if="error">{{ error }}</div>
     <div v-if="posts.length" class="layout">
       <div class="post-list">
@@ -27,14 +27,9 @@ export default {
 </script>
 
 <style>
-.home {
-  max-width: 1200px;
-  margin: 0;
-  padding: 10px;
-}
 .layout {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 80px;
+  gap: 20px;
 }
 </style>

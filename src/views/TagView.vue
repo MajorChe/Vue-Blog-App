@@ -1,10 +1,13 @@
 <template>
-  <div v-if="error">
-    {{ error }}
-  </div>
-  <div v-if="posts.length">
-    <PostList :posts = "postsWithTag" />
-    <TagCloud :posts="posts"/>
+  <div>
+    <div v-if="error">{{ error }}</div>
+    <div v-if="posts.length" class="layout">
+      <div class="post-list">
+        <PostList :posts="postsWithTag" />
+      </div>
+      <TagCloud :posts="posts" />
+    </div>
+    <div v-else>Loading...</div>
   </div>
 </template>
 
